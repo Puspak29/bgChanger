@@ -2,7 +2,8 @@ import React from 'react'
 
 function Buttons(props) {
   return (
-    <button className={`outline-none px-4 py-1 rounded-full text-${props.text} shadow-lg`}
+    <button className={`outline-none px-4 py-1 rounded-full ${props.text} shadow-lg`}
+    onClick={props.customClick}
     style={{backgroundColor: props.color }}
     >
       {props.color}
@@ -10,8 +11,8 @@ function Buttons(props) {
   )
 }
 
-Buttons.defaultProps={
-  text: "white"
-}
+// Buttons.defaultProps={
+//   text: "white"
+// }
 
 export default Buttons
